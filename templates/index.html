@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЛР №3 | Валідація вхідних даних</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script defer src="/static/script.js"></script>
+</head>
+<body>
+  <main class="panel">
+    <p class="eyebrow">APPLICATION SECURITY · LAB 03</p>
+    <h1>Реєстрація користувача</h1>
+    <p class="description">Дані перевіряються у браузері та повторно на сервері Flask.</p>
+    <form id="registration" novalidate>
+      <div class="field"><label for="username">Логін</label><input id="username" name="username" autocomplete="username" placeholder="user123" required maxlength="30"><small id="username-error"></small></div>
+      <div class="field"><label for="full_name">Ім’я</label><input id="full_name" name="full_name" autocomplete="given-name" placeholder="Олена" required><small id="full_name-error"></small></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="example@mail.com" required><small id="email-error"></small></div>
+      <div class="field"><label for="password">Пароль</label><input id="password" name="password" type="password" autocomplete="new-password" placeholder="Мінімум 8 символів" required><small id="password-error"></small></div>
+      <div class="field"><label for="phone">Номер телефону</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+37112345678" required><small id="phone-error"></small></div>
+      <div class="field"><label for="birthday">Дата народження</label><input id="birthday" name="birthday" type="date" required><small id="birthday-error"></small></div>
+      <button type="submit">Перевірити дані</button>
+      <p id="result" role="status" aria-live="polite"></p>
+    </form>
+    <p class="note">Демонстраційна форма: обліковий запис не створюється, дані не зберігаються.</p>
+  </main>
+</body>
+</html>
